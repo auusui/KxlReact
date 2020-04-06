@@ -8,3 +8,7 @@
   box-shadow: none;
   border: none;
 }
+
+.ui.borderless.footermenu.menu {
+  background-color: white;
+}
