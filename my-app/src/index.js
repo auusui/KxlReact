@@ -16,11 +16,6 @@ class TopMenu extends React.Component {
                 placeholder='Search...'
               />
             </Menu.Item>
-            {/*<Dropdown item text="MY CART 0" icon="shop">*/}
-            {/*  <Dropdown.Menu>*/}
-            {/*    <Dropdown.Item>My cart is currently empty.</Dropdown.Item>*/}
-            {/*  </Dropdown.Menu>*/}
-            {/*</Dropdown>*/}
           </Container>
         </Menu>
     )
@@ -46,9 +41,8 @@ class MiddleMenu extends React.Component {
     return (
         <div>
           <Menu borderless className="middlemenu" pointing secondary>
-            <Menu.Item name='MUST READ' active={activeItem === 'read'} onClick={this.handleItemClick}/>
-            <Menu.Item name='Create Appointment' active={activeItem === 'create '} onClick={this.handleItemClick}/>
-            <Menu.Item name='Contact Us' active={activeItem === 'contact'} onClick={this.handleItemClick}/>
+            <Menu.Item as={HTMLLinkElement} to='/read' name='MUST READ' active={activeItem === 'read'} onClick={this.handleItemClick}/>
+            <Menu.Item as={HTMLLinkElement} to='/create' name='Create Appointment' active={activeItem === 'create '} onClick={this.handleItemClick}/>
           </Menu>
           <Segment>
 
